@@ -1,14 +1,15 @@
 @font-face {
-  font-family: 'Game';
-  src: url(MMRock9.otf);
+  font-family: 'Pixel Emulator';
+  src: url("Pixel\ Emulator.otf") format('opentype');
 }
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
   background: linear-gradient(-45deg, #244566, #5a9ecfe3);
-  font: normal 14px 'Game';
+  font-family: 'Pixel Emulator', sans-serif;
 }
 
 :root {
@@ -18,7 +19,7 @@ body {
   --cor4: #E28A82;
   --cor5: #F2F2F2;
   --cor6: #2F4F70;
-  }
+}
 
 .title-container {
   text-align: center;
@@ -45,19 +46,31 @@ body {
 
 .opcao:hover {
   transform: scale(1.2);
+  background-color: #4D8CB9;
+  box-shadow: 1px 1px 15px #81bafc;
 }
 
 .opcao {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.4s;
   text-shadow: -1px -1px 0 #000;
-  background-color:#59A2F3;
-  text-align: center;
-  width: 200px;
+  background-color: #59A2F3;
+  width: 300px;
   border: solid 2px #F2F2F2;
   border-radius: 6px 0px;
-  box-shadow: 1px 1px 10px #59a1f3;
   padding: 10px;
   margin: 10px 0;
   text-decoration: none;
   color: var(--cor5); /* Ajuste a cor conforme necessário */
+  font-size: 20px;
+  text-align: center;
+}
+
+.emoji {
+  position: absolute;
+  left: 10px; /* Ajuste conforme necessário */
+  font-size: 24px; /* Aumenta o tamanho do emoji */
 }
